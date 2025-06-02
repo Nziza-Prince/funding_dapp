@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Decentralized Scholarship Funding</title>
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.5.3/dist/web3.min.js"></script>
+  <script src="web3.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f5f7fa;
+    }
+    h1 {
+      color: #333;
+    }
+    button {
+      background-color: #1e90ff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 10px 0;
+    }
+    button:hover {
+      background-color: #1c86ee;
+    }
+    input {
+      padding: 10px;
+      margin: 10px 0;
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .section {
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Decentralized Scholarship Funding</h1>
+  <button onclick="connectWallet()">Connect Wallet</button>
+  <p id="account"></p>
+
+  <div class="section">
+    <h2>Donate ETH</h2>
+    <input type="text" id="donationAmount" placeholder="Amount in ETH">
+    <button onclick="donate()">Donate</button>
+  </div>
+
+  <div class="section">
+    <h2>Apply for Scholarship</h2>
+    <button onclick="applyForScholarship()">Apply</button>
+  </div>
+
+  <div class="section">
+    <h2>Release Funds (Admin ONLY)</h2>
+    <input type="text" id="recipientAddress" placeholder="Recipient Address">
+    <button onclick="releaseFunds()">Release</button>
+  </div>
+</body>
+</html>
